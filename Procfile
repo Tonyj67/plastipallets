@@ -1,1 +1,1 @@
-web: gunicorn pallet_project.wsgi 
+web: gunicorn plastipallets.wsgi 
