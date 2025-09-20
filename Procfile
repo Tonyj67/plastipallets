@@ -1,1 +1,1 @@
-web: gunicorn pallet_site.wsgi
+web: gunicorn pallet_project.wsgi 
