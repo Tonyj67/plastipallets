@@ -1,0 +1,40 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer-columns">
+      <!-- Company Info -->
+      <div class="footer-col">
+        <h4>About Us</h4>
+        <p>
+         Plasti Pallets SA – Stronger, Smarter, Built for Africa. We
+          supply durable, high-quality pallet solutions for logistics,
+          warehouses, and distribution across the continent.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'products' %}">Products</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>Email: hello@plastipallets.co.za</p>
+        <p>Phone: 071 3290606</p>
+        <p>Location: KZNs, South Africa</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>
+        &copy; {% now "Y" %} Plasti Pallets SA. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>

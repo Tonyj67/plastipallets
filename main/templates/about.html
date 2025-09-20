@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}About Us – Plastii Pallets | High-Quality, Reinforced & Customizable{% endblock %}
+
+{% block content %}
+
+<!-- HERO BANNER -->
+<section class="py-5 bg-danger text-white">
+    <div class="container text-center">
+        <h1 class="display-5 fw-bold mb-3">Quality Plastic Pallets. Built Strong, Ready to carry.</h1>
+        <p class="lead mb-0">Suppliers of high-quality plastic pallets — reinforced, durable, RFID ready and designed for heavy-duty use across the Globe.</p>
+    </div>
+</section>
+
+<!-- White Gap -->
+<section class="py-4 bg-white"></section> <!-- 2cm gap -->
+
+
+<!-- WHO WE ARE -->
+<section class="py-5 bg-success text-white">
+  <div class="container text-center">
+    <h2 class="display-5 fw-bold mb-4">Who We Are</h2>
+    <p class="lead mb-4">
+      Plasti Pallets South Africa is your trusted supplier of industrial-grade plastic pallets — focused on quality, durability, and value.
+    </p>
+    <p class="mb-4">
+      We don't just sell pallets — we help businesses reduce waste, improve safety, and lower long-term costs with smarter logistics solutions.
+    </p>
+    <ul class="list-unstyled">
+      <li class="mb-2"><i class="fas fa-check-circle text-white me-2"></i> Rigorously tested for up to 8,000kg loads</li>
+      <li class="mb-2"><i class="fas fa-check-circle text-white me-2"></i> Ideal for automated systems & export</li>
+      <li class="mb-2"><i class="fas fa-check-circle text-white me-2"></i> Trusted by SA businesses</li>
+    </ul>
+  </div>
+</section>
+
+<!-- White Gap -->
+<section class="py-4 bg-white"></section> <!-- 2cm gap -->
+
+
+        <!-- Feature Boxes -->
+    <!-- Feature Boxes -->
+<div class="row g-4">
+    <!-- Box 1: HDPE Material -->
+    <div class="col-md-6">
+        <div class="feature-box p-4 bg-danger text-white rounded shadow-sm">
+            <h4><i class="fas fa-recycle text-white me-2"></i> High-Density Polyethylene (HDPE)</h4>
+            <p>Engineered to Outlast Wood . Our pallets are moulded from premium HDPE — stronger, cleaner, and longer-lasting than wood. They resist moisture, chemicals, and UV damage, so you get 10× the lifespan with zero splinters, rot, Theft for irresitable firewood or contamination..</p>
+        </div>
+    </div>
+
+    <!-- Box 2: Internal Reinforcement -->
+    <div class="col-md-6">
+        <div class="feature-box p-4 bg-danger text-white rounded shadow-sm">
+            <h4><i class="fas fa-bolt text-white me-2"></i> Steel-Reinforced for Heavy Loads</h4>
+            <p>Unmatched Strength Under Load. Heavy loads? No problem. With embedded steel reinforcement, each pallet is tested up to 8,000kg. Perfect for racking systems, export shipments, and demanding warehouses where downtime is not an option. </p>
+        </div>
+    </div>
+
+    <!-- Box 3: Customization Options -->
+    <div class="col-md-6">
+        <div class="feature-box p-4 bg-danger text-white rounded shadow-sm">
+            <h4><i class="fas fa-qrcode text-white me-2"></i> Tailored to Your Brand & Workflow</h4>
+            <ul class="mb-0">
+                <li><strong>Custom logos & barcodes</strong> — silkscreened for permanent ID</li>
+                <li><strong>RFID slots </strong> — for real-time tracking & inventory control</li>
+                <li><strong>Colour-coded by department</strong> — red for returns, blue for QA, green for dispatch</li>
+                <li><strong>Non-slip surface options</strong> — for wet or oily environments</li>
+            </ul>
+            <p class="mt-2 mb-0">Tell us your specs — we’ll supply the perfect pallet.</p>
+        </div>
+    </div>
+
+    <!-- Box 4: Bulk Buying = Big Savings -->
+    <div class="col-md-6">
+        <div class="feature-box p-4 bg-danger text-white rounded shadow-sm">
+            <h4><i class="fas fa-shield-alt text-white me-2"></i>Bulk Supply, Real Savings </h4>
+            <p>Why spend more over time? Bulk orders unlock tiered pricing and faster ROI. With no repairs, no pest control, and no replacements, our pallets pay for themselves in as little as 12 months — while keeping operations smooth and costs down. </p>
+        </div>
+      </div>
+   </div>  
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="py-5 text-center">
+  <div class="container">
+    <h3>Why South Africa Chooses Us</h3>
+    <p class="lead mb-5">Reliable supply. Premium quality. Real cost savings.</p>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="icon-box p-4 h-100 d-flex flex-column align-items-center">
+          <i class="fas fa-boxes fa-3x text-primary mb-3"></i>
+          <h5>Bulk Pricing</h5>
+          <p>Save up to 30% with container-load orders. We handle shipping and customs.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="icon-box p-4 h-100 d-flex flex-column align-items-center">
+          <i class="fas fa-microchip fa-3x text-success mb-3"></i>
+          <h5>Trackable Pallets</h5>
+          <p>Add RFID tags to monitor pallet movement and reduce loss.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="icon-box p-4 h-100 d-flex flex-column align-items-center">
+          <i class="fas fa-shield-alt fa-3x text-warning mb-3"></i>
+          <h5>3-Year Warranty</h5>
+          <p>We stand behind every pallet. If it fails under normal use — we replace it.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta bg-danger text-light text-center py-5 mt-4">
+  <div class="container">
+    <h3>Ready to Stock Up?</h3>
+    <p class="mb-4">Whether you need 10 or 100,000 pallets — we’ve got you covered with the best prices and service.</p>
+    <a href="{% url 'products' %}" class="btn btn-light btn-lg me-3">View Pallets</a>
+    <a href="https://wa.me/27713290606" target="_blank" class="btn btn-outline-light btn-lg">Get a Quote</div>
+</section>
+
+{% endblock %}

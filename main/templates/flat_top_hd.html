@@ -1,0 +1,314 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Flat Top Pallets | Plasti Pallets SA{% endblock %}
+
+{% block content %}
+
+<section class="hero text-light text-center py-5"
+         style="background: url('{% static 'main/images/warehouse-hero.jpg' %}') no-repeat center center / cover; position: relative;">
+  <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(220, 53, 69, 1); z-index: 1;"></div>
+  <div class="container" style="position: relative; z-index: 2;">          
+    <h1 class="display-5 fw-bold mt-3">Flattop Heavy Duty</h1>
+    <p class="lead">Up to 6T Dynamic • Lightweight • Ideal for Pharmaceutical & Food</p>
+    <a href="{% url 'products' %}" class="btn btn-primary btn-lg">← Back to Products</a>
+  </div>
+</section>
+
+<!-- White Gap -->
+<section class="py-4 bg-white"></section> <!-- 2cm gap -->
+
+
+<!-- PALLETS GRID -->
+
+<!-- Product Grid Section -->
+<section class="py-5 bg-success">
+    <div class="container-fluid px-5">   
+        <img src="{% static 'images/flat-top-hd/info-chart.jpg' %}" alt="Flat Pallets Info"
+              class="img-fluid w-100"
+              style="max-height: 80px; object-fit: contain;">
+        <h2 class="text-center mb-4 text-white">Related Products</h2>
+        <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100 shadow-sm border-0 card-hover">
+                    <img src="{% static 'images/flat-top-hd/a1000x1000x165.jpg' %}" class="card-img-top" alt="Flat Top HD" style="height: 200px; object-fit: contain;">
+                    <div class="card-body d-flex flex-column">                       
+                        <p class="card-text flex-grow-1">Reinforced: 7 Bars</p>
+                      <img src="{% static 'images/flat-top-hd/capacity-chart.jpg' %}" class="card-img-top" alt="Flat Top HD" style="height: 40px; object-fit: contain;">   
+                         <h5 class="card-title">1000 x 1000 x 165 mm</h5>
+                        <a href="https://wa.me/27713290606?text=Hi%20PlastiPallets,%20I%20want%20a%20quote%20for%20Heavy%20Duty%20Grid" class="btn btn-success">Get Quote</a> 
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="{% static 'images/flat-top-hd/b1100x1100x150.jpg' %}" class="card-img-top" alt="Flat Top HD" style="height: 200px; object-fit: contain;">
+                    <div class="card-body d-flex flex-column">                        
+                        <p class="card-text flex-grow-1">Reinforced : 5 Bars • </p>
+                         <img src="{% static 'images/flat-top-hd/capacity-chart.jpg' %}" class="card-img-top" alt="Flat Top HD" style="height: 40px; object-fit: contain;">
+                        <h5 class="card-title">1100 x 1100 x 150 mm</h5> 
+                        <a href="https://wa.me/27713290606?text=Hi%20PlastiPallets,%20I%20want%20a%20quote%20for%20Heavy%20Duty%20Grid" class="btn btn-success">Get Quote</a> 
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="{% static 'images/flat-top-hd/c1100x1100x150.jpg' %}" class="card-img-top" alt="Flat Top HD" style="height: 200px; object-fit: contain;">
+                    <div class="card-body d-flex flex-column">                        
+                        <p class="card-text flex-grow-1">Reinforced: 8 Bars •</p>
+                          <img src="{% static 'images/flat-top-hd/capacity-chart.jpg' %}" class="card-img-top" alt="Flat Top HD" style="height: 40px; object-fit: contain;">
+                        <h5 class="card-title">1100 x 1100 x 150 mm</h5>
+                        <a href="https://wa.me/27713290606?text=Hi%20PlastiPallets,%20I%20want%20a%20quote%20for%20Heavy%20Duty%20Grid" class="btn btn-success">Get Quote</a> 
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="{% static 'images/flat-top-hd/d1200x800x150.jpg' %}" class="card-img-top" alt="Flat Top HD" style="height: 200px; object-fit: contain;">
+                    <div class="card-body d-flex flex-column">                        
+                        <p class="card-text flex-grow-1">Reinforce: 8 Bars •</p>
+                         <img src="{% static 'images/flat-top-hd/capacity-chart.jpg' %}" class="card-img-top" alt="Flat Top HD" style="height: 40px; object-fit: contain;">
+                        <h5 class="card-title">1100 x 800 x 165 mm</h5>
+                        <a href="https://wa.me/27713290606?text=Hi%20PlastiPallets,%20I%20want%20a%20quote%20for%20Heavy%20Duty%20Grid" class="btn btn-success">Get Quote</a> 
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="{% static 'images/flat-top-hd/e1200x1000x150.jpg' %}" class="card-img-top" alt="Flat Top HD" style="height: 200px; object-fit: contain;">
+                    <div class="card-body d-flex flex-column">                        
+                        <p class="card-text flex-grow-1">Reinforced 5 Bars •</p>
+                         <img src="{% static 'images/flat-top-hd/capacity-chart.jpg' %}" class="card-img-top" alt="Flat Top HD" style="height: 40px; object-fit: contain;">
+                        <h5 class="card-title">1200 x 1000 x 150 mm</h5>
+                        <a href="https://wa.me/27713290606?text=Hi%20PlastiPallets,%20I%20want%20a%20quote%20for%20Heavy%20Duty%20Grid" class="btn btn-success">Get Quote</a> 
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="{% static 'images/flat-top-hd/f1200x1000x150.jpg' %}" class="card-img-top" alt="Flat Top HD" style="height: 180px; object-fit: contain;">
+                    <div class="card-body d-flex flex-column">                        
+                        <p class="card-text flex-grow-1">Reinforced: 8 Bars •</p>
+                          <img src="{% static 'images/flat-top-hd/capacity-chart.jpg' %}" class="card-img-top" alt="Flat Top HD" style="height: 40px; object-fit: contain;">
+                         <h5 class="card-title">1200 x 1100 x 150 mm</h5>
+                        <a href="https://wa.me/27713290606?text=Hi%20PlastiPallets,%20I%20want%20a%20quote%20for%20Heavy%20Duty%20Grid" class="btn btn-success">Get Quote</a> 
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="{% static 'images/flat-top-hd/j1300x1100x160.jpg' %}" class="card-img-top" alt="Flat Top HD" style="height: 200px; object-fit: contain;">
+                    <div class="card-body d-flex flex-column">                        
+                        <p class="card-text flex-grow-1">Reinforced: 8 Bars • </p>
+                        <img src="{% static 'images/flat-top-hd/capacity-chart.jpg' %}" class="card-img-top" alt="Flat Top HD" style="height: 40px; object-fit: contain;"> 
+                         <h5 class="card-title">1300 x 1100 x 160 mm</h5> 
+                       <a href="https://wa.me/27713290606?text=Hi%20PlastiPallets,%20I%20want%20a%20quote%20for%20Heavy%20Duty%20Grid" class="btn btn-success">Get Quote</a> 
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="{% static 'images/flat-top-hd/k1300x1300x150.jpg' %}" class="card-img-top" alt="Flat Top HD" style="height: 200px; object-fit: contain;">
+                    <div class="card-body d-flex flex-column">                        
+                        <p class="card-text flex-grow-1">Reinforced: 8 Bars •</p>
+                          <img src="{% static 'images/flat-top-hd/capacity-chart.jpg' %}" class="card-img-top" alt="Flat Top HD" style="height: 40px; object-fit: contain;">
+                          <h5 class="card-title">1100 x 1000 x 165 mm</h5> 
+                        <a href="https://wa.me/27713290606?text=Hi%20PlastiPallets,%20I%20want%20a%20quote%20for%20Heavy%20Duty%20Grid" class="btn btn-success">Get Quote</a> 
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add 2–4 more cards as needed -->
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

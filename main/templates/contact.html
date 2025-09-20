@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Contact Us – Premium Plastic Pallets SA{% endblock %}
+
+{% block content %}
+
+<!-- HERO BANNER -->
+<section class="contact-hero text-light text-center py-5" 
+  style="background: url('{% static "images/warehouse-hero.jpg" %}') no-repeat center center / cover; height: 20vh; position: relative;">
+  <div style="position: absolute; inset: 0; background: rgba(220, 53, 69, 1); z-index: 1;"></div>
+  <div class="container" style="position: relative; z-index: 2;">
+    <h1 class="display-5 fw-bold">Get in Touch</h1>
+    <p class="lead">Questions? Quotes? Let’s talk.</p>
+  </div>
+</section>
+
+<!-- White Gap -->
+<section class="py-4 bg-white"></section> <!-- 2cm gap -->
+
+
+<!-- CONTACT SECTION -->
+<section class="py-5 bg-success">
+  <div class="container">
+    <div class="row g-5">
+      
+      <!-- Contact Info -->
+      <div class="col-lg-5">
+        <h3 class="mb-4">Our Contact Details</h3>
+        <p class="mb-3"><i class="fas fa-map-marker-alt text-success me-2"></i> KZN, South Africa</p>
+          
+       
+        <p class="mb-3"><i class="fas fa-phone text-success me-2"></i> +27 71 329 0606</p>
+        <p class="mb-3"><i class="fas fa-envelope text-success me-2"></i> info@plasticpallets.co.za</p>
+        <p class="mb-3"><i class="fab fa-whatsapp text-success me-2"></i> WhatsApp us directly for fast quotes!</p>
+        <a href="https://wa.me/27713290606" target="_blank" class="btn btn-primary btn-lg mt-3">
+          <i class="fab fa-whatsapp me-1"></i> Chat on WhatsApp
+        </a>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-lg-7">
+        <h3 class="mb-4">Send Us a Message</h3>
+        <form method="post" action="#">
+          {% csrf_token %}
+          <div class="mb-3">
+            <label for="name" class="form-label">Your Name</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Your Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Your Message</label>
+            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- White Gap -->
+<section class="py-4 bg-white"></section> <!-- 2cm gap -->
+
+
+<!-- MAP / CTA -->
+<section class="py-5 text-center bg-danger text-light">
+  <div class="container">
+    <h3>Contact Us Anytime</h3>
+    <p class="lead">We’re here to support your business with reliable pallet solutions.</p>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15976.48507946283!2d30.9769766!3d-29.9309297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9fc8c1b0a5d0c3%3A0x1b2a78c3a9e7e6d1!2sDurban%2C%20South%20Africa!5e0!3m2!1sen!2sza!4v1726680000000!5m2!1sen!2sza" 
+      width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+  </div>
+</section>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

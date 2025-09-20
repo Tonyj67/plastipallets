@@ -1,0 +1,171 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+Premium Plastic Pallets SA | Stronger, Smarter, Built for Africa
+{% endblock %}
+
+{% block content %}
+
+<!-- 1. HERO BANNER WITH BACKGROUND LOGO -->
+<section
+  class="hero text-light text-center py-5"
+  style="
+    background: url('{% static 'main/images/warehouse-hero.jpg' %}') no-repeat
+      center center / cover;
+    height: 30vh;
+    position: relative;
+  "
+>
+  <!-- Overlay -->
+  <div
+    style="
+      position: absolute;
+      inset: 0;
+      background: rgba(220, 53, 69, 1);
+      z-index: 1;
+    "
+  ></div>
+
+  <!-- Content -->
+  <div
+    class="container d-flex flex-column align-items-center justify-content-center h-200"
+    style="position: relative; z-index: 2"
+  >
+    <h1 class="display-5 fw-bold mb-3">
+      South Africa’s Most Durable Plastic Pallet Supplier
+    </h1>
+    <p class="lead mb-4">
+      Steel-reinforced • 5-Year Warranty • RFID-Ready • Nationwide Delivery
+    </p>
+    <div class="d-flex gap-3 justify-content-center">
+      <a href="#why-us" class="btn btn-success btn-lg">Why Choose Us</a>
+      <a
+        href="https://wa.me/27713290606"
+        target="_blank"
+        class="btn btn-success btn-lg"
+      >
+        <i class="fab fa-whatsapp me-1"></i> Get a Quote
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- White Gap -->
+<section class="py-4 bg-white"></section> <!-- 2cm gap -->
+
+
+<!-- 2. TRUST BAR -->
+<section class="py-3 bg-success text-light text-center shadow-sm">
+  <div class="container">
+    <div class="row gy-2">
+      <div class="col-md-3">
+        <i class="fas fa-shield-alt me-1"></i> 5-Year Warranty
+      </div>
+      <div class="col-md-3">
+        <i class="fas fa-recycle me-1"></i> HDPE (Recycled + Virgin)
+      </div>
+      <div class="col-md-3">
+        <i class="fas fa-microchip me-1"></i> RFID/Logo Ready
+      </div>
+      <div class="col-md-3">
+        <i class="fas fa-truck me-1"></i> Nationwide Delivery
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. WHY CHOOSE US -->
+<section id="why-us" class="py-6">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <h2>Why South Africa Trusts Us</h2>
+        <p class="lead">We don’t just sell pallets — we solve logistics problems.</p>
+        <ul class="list-unstyled mt-4">
+          <li class="mb-3">
+            <i class="fas fa-check-circle text-success me-2"></i>
+            <strong>Steel-Reinforced</strong> – No more cracked pallets in racking
+          </li>
+          <li class="mb-3">
+            <i class="fas fa-check-circle text-success me-2"></i>
+            <strong>3-Year Warranty</strong> – We stand behind every pallet
+          </li>
+          <li class="mb-3">
+            <i class="fas fa-check-circle text-success me-2"></i>
+            <strong>RFID & Logo Ready</strong> – Perfect for traceability and branding
+          </li>
+          <li class="mb-3">
+            <i class="fas fa-check-circle text-success me-2"></i>
+            <strong>Nestable Design</strong> – Save up to 60% on return transport
+          </li>
+          <li class="mb-3">
+            <i class="fas fa-check-circle text-success me-2"></i>
+            <strong>Made for SA Conditions</strong> – UV-stabilized, chemical-resistant, load-tested
+          </li>
+        </ul>
+        <a href="{% url 'about' %}" class="btn btn-outline-success btn-lg mt-3">
+          Learn About Us
+        </a>
+      </div>
+      <div class="col-lg-6 text-center">
+        <img
+          src="{% static 'images/logo.png' %}"
+          alt="Plastic Pallets SA Logo"
+          class="img-fluid rounded shadow"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. INDUSTRY USE CASES -->
+<section class="py-6 bg-success">
+  <div class="container">
+    <h2 class="text-center mb-5">Who Uses Our Pallets?</h2>
+    <div class="row g-4 text-center">
+      <div class="col-md-4">
+        <div class="p-4 bg-white rounded shadow-sm h-100">
+          <i class="fas fa-warehouse fa-3x text-success mb-3"></i>
+          <h4>Warehousing</h4>
+          <p>Stackable, rack-safe, and compatible with automated systems.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 bg-white rounded shadow-sm h-100">
+          <i class="fas fa-truck fa-3x text-success mb-3"></i>
+          <h4>Logistics</h4>
+          <p>Nestable design reduces return freight costs by up to 60%.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 bg-white rounded shadow-sm h-100">
+          <i class="fas fa-industry fa-3x text-success mb-3"></i>
+          <h4>Manufacturing</h4>
+          <p>Chemical-resistant, easy to clean, and built for heavy loads.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. CTA FOOTER (FULL WIDTH) -->
+<section class="py-6 bg-danger text-light text-center">
+  <div class="container">
+    <h2>Ready to Upgrade Your Pallet System?</h2>
+    <p class="lead mb-4">Durable, nestable, and backed by a 5-year warranty.</p>
+    <a
+      href="https://wa.me/27713290606"
+      target="_blank"
+      class="btn btn-success btn-lg px-5"
+    >
+      <i class="fab fa-whatsapp me-1"></i> Get Your Quote Today
+    </a>
+    <p class="mt-3 small text-muted">
+      Trusted by 500+ businesses across South Africa
+    </p>
+  </div>
+</section>
+
+{% endblock %}
