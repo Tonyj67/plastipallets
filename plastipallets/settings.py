@@ -26,7 +26,14 @@ SECRET_KEY = 'django-insecure-11n3y0!7$$yd2&1hiz!7!8vffz38_z!oj_ds5%m93al2tp0+6y
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["plastipallets.com", "www.plastipallets.com", ".herokuapp.com"]
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'localhost',
+    'plastipallets.com',
+    'www.plastipallets.com',
+    '.herokuapp.com',
+]
+
 
 
 
