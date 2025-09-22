@@ -41,7 +41,7 @@
       <!-- Contact Form -->
       <div class="col-lg-7">
         <h3 class="mb-4">Send Us a Message</h3>
-        <form method="post" action="#">
+        <form method="post" action="{% url 'send_email' %}">
           {% csrf_token %}
           <div class="mb-3">
             <label for="name" class="form-label">Your Name</label>

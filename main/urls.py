@@ -12,6 +12,7 @@ urlpatterns = [
     path('products/light-grid/', views.light_grid, name='light_grid'),
     path('products/nestable/', views.nestable, name='nestable'),
     path('all-products/', views.all_products, name='all_products'),
+    path('send-email/', views.send_email, name='send_email'),  # ← Add this
 ]# main/urls.py
 
 
