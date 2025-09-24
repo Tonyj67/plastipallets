@@ -35,7 +35,7 @@ ALLOWED_HOSTS = [
     'localhost',
     'plastipallets.com',
     'www.plastipallets.com',
-    '.herokuapp.com',
+    'plastipallets.herokuapp.com',
 ]
 
 
@@ -138,6 +138,7 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
 STATIC_ROOT = BASE_DIR / "staticfiles"
+os.makedirs(os.path.join(BASE_DIR, 'static'), exist_ok=True)
 
 SECURE_SSL_REDIRECT = False
 SESSION_COOKIE_SECURE = False
