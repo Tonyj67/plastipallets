@@ -33,7 +33,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path('', TemplateView.as_view(template_name='index.html'), name='home'),
     path('', home_view),
-    path('', RedirectView.as_view(url='https://www.plastipallets.com/', permanent=True)),
+    #path('', RedirectView.as_view(url='https://www.plastipallets.com/', permanent=True)),
 ]
 
 

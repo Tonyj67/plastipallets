@@ -20,7 +20,7 @@ urlpatterns = [
     path('products/nestable/', views.nestable, name='nestable'),
     path('all-products/', views.all_products, name='all_products'),
     path('send-email/', views.send_email, name='send_email'),  # ← Add this
-    th('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
 ]# main/urls.py
 
 
