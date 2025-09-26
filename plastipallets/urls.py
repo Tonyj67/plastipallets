@@ -17,22 +17,22 @@ Including another URLconf
 # plastipallets/urls.py
 from django.contrib import admin
 from django.urls import path, include
-from django.views.generic import TemplateView
-from django.http import HttpResponse
-from django.views.generic import RedirectView
+#from django.views.generic import TemplateView
+#from django.http import HttpResponse
+#from django.views.generic import RedirectView
 
-def home_view(request):
-    return HttpResponse("""
-    <h1>PlastiPallets is Working!</h1>
-    <p>Your Django app is successfully deployed on Heroku!</p>
-    <p><a href="/admin/">Admin Panel</a></p>
-    """)
+#def home_view(request):
+   # return HttpResponse("""
+    #<h1>PlastiPallets is Working!</h1>
+   # <p>Your Django app is successfully deployed on Heroku!</p>
+    #<p><a href="/admin/">Admin Panel</a></p>
+    #""")
 
 urlpatterns = [
     path("", include("main.urls")),  # app pages
     path("admin/", admin.site.urls),
-    path('', TemplateView.as_view(template_name='index.html'), name='home'),
-    path('', home_view),
+   # path('', TemplateView.as_view(template_name='index.html'), name='home'),
+    #path('', home_view),
     #path('', RedirectView.as_view(url='https://www.plastipallets.com/', permanent=True)),
 ]
 
