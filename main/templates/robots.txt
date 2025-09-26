@@ -1,0 +1,7 @@
+# static/robots.txt
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+Sitemap: https://www.plastipallets.com/sitemap.xml
