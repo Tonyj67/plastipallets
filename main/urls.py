@@ -1,5 +1,12 @@
 from django.urls import path
 from . import views
+from django.contrib.sitemaps.views import sitemap
+from main.sitemaps import StaticViewSitemap
+
+sitemaps = {
+    'static': StaticViewSitemap,
+}
+
 
 urlpatterns = [
     path('', views.home, name='home'),
@@ -13,6 +20,7 @@ urlpatterns = [
     path('products/nestable/', views.nestable, name='nestable'),
     path('all-products/', views.all_products, name='all_products'),
     path('send-email/', views.send_email, name='send_email'),  # ← Add this
+    th('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
 ]# main/urls.py
 
 
