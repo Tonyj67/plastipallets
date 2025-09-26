@@ -19,23 +19,38 @@ Including another URLconf
 URL configuration for plastipallets project.
 """
 
+# plastipallets/urls.py
+
 from django.contrib import admin
 from django.urls import path, include
 from django.contrib.sitemaps.views import sitemap
-from main.sitemaps import sitemaps_dict   # adjust import if your file name differs
+from main.sitemaps import StaticViewSitemap   # adjust if your sitemap is in a different app
+
+# Django expects a dict of sitemaps
+sitemaps = {
+    'static': StaticViewSitemap,
+}
 
 urlpatterns = [
-    # Admin panel
-    path("admin/", admin.site.urls),
-
-    # All site pages live inside the 'main' app
-    path("", include("main.urls")),
-
-    # XML sitemap for search engines
-    path(
-        "sitemap.xml",
-        sitemap,
-        {"sitemaps": sitemaps_dict},
-        name="django.contrib.sitemaps.views.sitemap",
-    ),
+    path('', include('main.urls')),   # all your main app URLs
+    path('admin/', admin.site.urls),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps},
+         name='django.contrib.sitemaps.views.sitemap'),
 ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
