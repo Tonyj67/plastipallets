@@ -4,21 +4,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}PlastiPallets{% endblock %}</title>
-    <!-- Bootstrap CSS -->
+
+    {# ---------- SEO TITLE & META ---------- #}
+    <title>{% block title %}Plastic Pallets South Africa | PlastiPallets{% endblock %}</title>
+    {% block meta_description %}
+    <meta name="description" content="Premium plastic pallets supplier in South Africa. Steel-reinforced, 5-year warranty, RFID ready and nationwide delivery from PlastiPallets.">
+    {% endblock %}
+    <meta name="keywords" content="plastic pallets, PlastiPallets, South Africa, pallet supplier, heavy duty pallets">
+
+    {# ---------- Canonical URL ---------- #}
+    <link rel="canonical" href="https://plastiPallets.com/">
+
+    {# ---------- Social / Open Graph ---------- #}
+    <meta property="og:site_name" content="PlastiPallets">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://plastiPallets.com/">
+    <meta property="og:title" content="Plastic Pallets South Africa | PlastiPallets">
+    <meta property="og:description" content="Durable plastic pallets with 5-year warranty and nationwide delivery. Built for South African conditions.">
+    <meta property="og:image" content="https://plastiPallets.com{% static 'main/images/warehouse-hero.jpg' %}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Plastic Pallets South Africa | PlastiPallets">
+    <meta name="twitter:description" content="Durable plastic pallets with 5-year warranty and nationwide delivery.">
+    <meta name="twitter:image" content="https://plastiPallets.com{% static 'main/images/warehouse-hero.jpg' %}">
+
+    {# ---------- Icons & Manifest ---------- #}
+    <link rel="icon" href="{% static 'main/images/favicon.ico' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'main/images/apple-touch-icon.png' %}">
+    <link rel="manifest" href="{% static 'main/manifest.json' %}">
+
+    {# ---------- CSS ---------- #}
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{% static 'style.css' %}">
     <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
+
 <body>
     <!-- Navbar -->
     {% include 'includes/navbar.html' %}
 
     <!-- Main Content -->
-    <main class="container my-4">
+    <main>
         {% block content %}
         {% endblock %}
     </main>
@@ -26,7 +52,7 @@
     <!-- Footer -->
     {% include 'includes/footer.html' %}
 
-    <!-- Bootstrap JS -->
+    {# ---------- JS ---------- #}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

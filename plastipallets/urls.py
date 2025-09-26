@@ -19,6 +19,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import TemplateView
 from django.http import HttpResponse
+from django.views.generic import RedirectView
 
 def home_view(request):
     return HttpResponse("""
@@ -32,6 +33,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path('', TemplateView.as_view(template_name='index.html'), name='home'),
     path('', home_view),
+    path('', RedirectView.as_view(url='https://www.plastipallets.com/', permanent=True)),
 ]
 
 
