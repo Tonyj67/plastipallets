@@ -11,6 +11,10 @@
     <meta name="description" content="Premium plastic pallets supplier in South Africa. Steel-reinforced, 5-year warranty, RFID-ready and nationwide delivery from PlastiPallets.">
     {% endblock %}
     <meta name="keywords" content="plastic pallets, PlastiPallets, South Africa, pallet supplier, heavy duty pallets">
+    <link rel="canonical" href="https://plastipallets.com/">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://www.plastipallets.com/sitemap.xml">
+    <meta name="robots" content="index, follow">
+
 
     {# ---------- Canonical URL ---------- #}
     <link rel="canonical" href="https://plastipallets.com/">
@@ -31,6 +35,12 @@
     <link rel="icon" href="{% static 'main/images/favicon.ico' %}">
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'main/images/apple-touch-icon.png' %}">
     <link rel="manifest" href="{% static 'main/manifest.json' %}">
+
+    {# --- ADD SITEMAP LINK HERE --- #}
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="{% url 'django.contrib.sitemaps.views.sitemap' %}">
+
+    {# --- Add after sitemap link --- #}
+    <meta name="robots" content="index, follow">
 
     {# ---------- CSS ---------- #}
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
