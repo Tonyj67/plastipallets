@@ -35,6 +35,7 @@ ALLOWED_HOSTS = [
     'localhost',
     'plastipallets.com',
     'www.plastipallets.com',
+    'plastipallets-7fbba06b61bd.herokuapp.com'
     'plastipallets.herokuapp.com',
 ]
 
