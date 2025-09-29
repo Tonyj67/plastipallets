@@ -1,18 +1,41 @@
+# your_project/middleware.py
+
 from django.http import HttpResponsePermanentRedirect
 
-class WWWRedirectMiddleware:
+class WwwRedirectMiddleware:
     def __init__(self, get_response):
         self.get_response = get_response
-    
+
     def __call__(self, request):
-        host = request.get_host().split(':')[0]  # Remove port if present
+        host = request.get_host().split(':')[0].lower()
         
-        # Redirect plastipallets.com → www.plastipallets.com
-        if host == 'plastipallets.com':
-            print("DEBUG: Redirecting to www version")  # Debug line
-            return HttpResponsePermanentRedirect(
-                'https://www.plastipallets.com' + request.get_full_path()
-            )
+        # If host does NOT start with "www." and ends with your domain, redirect
+        if not host.startswith('www.') and host.endswith('plastipallets.com'):
+            scheme = 'https' if request.is_secure() or request.META.get('HTTP_X_FORWARDED_PROTO') == 'https' else 'http'
+            new_host = 'www.' + host
+            redirect_url = f"{scheme}://{new_host}{request.get_full_path()}"
+            return HttpResponsePermanentRedirect(redirect_url)
         
         return self.get_response(request)
-        return response
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
