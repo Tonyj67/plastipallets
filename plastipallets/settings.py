@@ -61,7 +61,7 @@ INSTALLED_APPS = [
 SITE_ID = 1
 
 MIDDLEWARE = [
-    'pallet_project.middleware.WWWRedirectMiddleware',  # ← ADD THIS LINE
+    'main.middleware.WWWRedirectMiddleware',  # ← ADD THIS LINE
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
