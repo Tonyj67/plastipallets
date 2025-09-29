@@ -11,29 +11,29 @@ class WWWRedirectMiddleware:
 
     def __call__(self, request):
         host = request.META.get('HTTP_HOST', '').split(':')[0].lower()
-        is_secure = request.is_secure() or request.META.get('HTTP_X_FORWARDED_PROTO') == 'https'
-        print(f"DEBUG: Host is '{host}', secure: {is_secure}")
         
-        # Define our canonical URL
-        canonical_url = f"https://www.plastipallets.com{request.get_full_path()}"
+        # Cloudflare headers for SSL detection
+        cf_visitor = request.META.get('HTTP_CF_VISITOR', '')
+        x_forwarded_proto = request.META.get('HTTP_X_FORWARDED_PROTO', '')
+        x_forwarded_proto_heroku = request.META.get('HTTP_X_FORWARDED_PROTO', '')
         
-        # Check if we need to redirect
-        needs_redirect = False
+        # Determine if request is secure (handles Cloudflare)
+        is_secure = (
+            request.is_secure() or 
+            x_forwarded_proto == 'https' or 
+            x_forwarded_proto_heroku == 'https' or
+            '"scheme":"https"' in cf_visitor
+        )
         
-        # Case 1: Non-www domain
-        if host == 'plastipallets.com':
-            needs_redirect = True
-            print("DEBUG: Redirect needed - non-www domain")
+        print(f"DEBUG: Host: '{host}', Secure: {is_secure}")
+        print(f"DEBUG: CF_VISITOR: {cf_visitor}")
+        print(f"DEBUG: X_FORWARDED_PROTO: {x_forwarded_proto}")
         
-        # Case 2: Not using HTTPS
-        elif not is_secure:
-            needs_redirect = True
-            print("DEBUG: Redirect needed - not HTTPS")
-        
-        # Perform redirect if needed
-        if needs_redirect:
-            print(f"DEBUG: Redirecting to: {canonical_url}")
-            return HttpResponsePermanentRedirect(canonical_url)
+        # Redirect conditions
+        if host == 'plastipallets.com' or (host == 'www.plastipallets.com' and not is_secure):
+            redirect_url = f"https://www.plastipallets.com{request.get_full_path()}"
+            print(f"DEBUG: Redirecting to: {redirect_url}")
+            return HttpResponsePermanentRedirect(redirect_url)
         
         print("DEBUG: No redirect needed")
         return self.get_response(request)
