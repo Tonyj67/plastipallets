@@ -16,6 +16,7 @@ from dotenv import load_dotenv
 from decouple import config
 import certifi   # <-- add this line
 from decouple import config
+import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -28,7 +29,7 @@ load_dotenv(BASE_DIR / ".env")
 SECRET_KEY = 'django-insecure-11n3y0!7$$yd2&1hiz!7!8vffz38_z!oj_ds5%m93al2tp0+6y'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
@@ -60,6 +61,7 @@ INSTALLED_APPS = [
 SITE_ID = 1
 
 MIDDLEWARE = [
+    'pallet_project.middleware.WWWRedirectMiddleware',  # ← ADD THIS LINE
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -95,11 +97,13 @@ WSGI_APPLICATION = 'plastipallets.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(
+        default=os.environ.get('DATABASE_URL'),
+        conn_max_age=600,
+        ssl_require=True
+    )
 }
+
 
 
 # Password validation
