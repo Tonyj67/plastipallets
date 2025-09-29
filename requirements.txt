@@ -6,7 +6,9 @@ charset-normalizer==3.4.3
 click==8.2.1
 colorama==0.4.6
 cryptography==46.0.1
+dj-database-url==3.0.1
 Django==5.2.6
+django-sslify==0.2.7
 gunicorn==23.0.0
 idna==3.10
 packaging==25.0

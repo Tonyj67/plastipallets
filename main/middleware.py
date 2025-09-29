@@ -1,6 +1,6 @@
 # your_project/middleware.py
 # your_project/middleware.py
-
+print("DEBUG: Middleware module is being loaded!")  # This shows on server start
 from django.http import HttpResponsePermanentRedirect
 
 class WwwRedirectMiddleware:

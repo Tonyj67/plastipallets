@@ -61,6 +61,7 @@ INSTALLED_APPS = [
 SITE_ID = 1
 
 MIDDLEWARE = [
+    'sslify.middleware.SSLifyMiddleware',  # ← First!
     'main.middleware.WWWRedirectMiddleware',  # ← ADD THIS LINE
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
