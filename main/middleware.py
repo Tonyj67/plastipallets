@@ -9,8 +9,10 @@ class WWWRedirectMiddleware:
         
         # Redirect plastipallets.com → www.plastipallets.com
         if host == 'plastipallets.com':
+            print("DEBUG: Redirecting to www version")  # Debug line
             return HttpResponsePermanentRedirect(
                 'https://www.plastipallets.com' + request.get_full_path()
             )
         
         return self.get_response(request)
+        return response
