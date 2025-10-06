@@ -36,7 +36,7 @@ ALLOWED_HOSTS = [
     'localhost',
     'plastipallets.com',
     'www.plastipallets.com',
-    'plastipallets-7fbba06b61bd.herokuapp.com'
+    'plastipallets-7fbba06b61bd.herokuapp.com',
     'plastipallets.herokuapp.com',
 ]
 
@@ -61,9 +61,9 @@ INSTALLED_APPS = [
 SITE_ID = 1
 
 MIDDLEWARE = [
-     #'main.middleware.DebugMiddleware',    
-    'main.middleware.WWWRedirectMiddleware',  # ← ADD THIS LINE
-    'django.middleware.security.SecurityMiddleware',
+     #'main.middleware.DebugMiddleware', 
+    'django.middleware.security.SecurityMiddleware',    
+    'main.middleware.WWWRedirectMiddleware',  # ← ADD THIS LINE    
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -98,13 +98,11 @@ WSGI_APPLICATION = 'plastipallets.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(
-        default=os.environ.get('DATABASE_URL'),
-        conn_max_age=600,
-        ssl_require=True
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
-
 
 
 # Password validation
@@ -152,6 +150,9 @@ os.makedirs(os.path.join(BASE_DIR, 'static'), exist_ok=True)
 
 USE_X_FORWARDED_HOST = True
 SECURE_SSL_REDIRECT = True
+SECURE_HSTS_SECONDS = 31536000  # 1 year in seconds
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_PRELOAD = True
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
@@ -159,7 +160,7 @@ CSRF_COOKIE_SECURE = True
 
 
 # Whitenoise
-MIDDLEWARE.insert(1, "whitenoise.middleware.WhiteNoiseMiddleware")
+#MIDDLEWARE.insert(1, "whitenoise.middleware.WhiteNoiseMiddleware")
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 

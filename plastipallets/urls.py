@@ -20,23 +20,38 @@ URL configuration for plastipallets project.
 """
 
 # plastipallets/urls.py
+# plastipallets/urls.py
 from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import TemplateView
 from django.contrib.sitemaps.views import sitemap
-from main.sitemaps import StaticSitemap
+from main.sitemaps import StaticSitemap, ProductSitemap  # include ProductSitemap
 
-# Define sitemaps
+# Global sitemaps
 sitemaps = {
     'static': StaticSitemap,
+    'products': ProductSitemap,  # dynamic products included
 }
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('main.urls')),  # Include all app URLs
-    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
+    path('', include('main.urls')),  # include all app URLs
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='sitemap'),  # SEO-friendly
     path('robots.txt', TemplateView.as_view(template_name="robots.txt", content_type="text/plain")),
 ]
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
