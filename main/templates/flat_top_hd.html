@@ -1,231 +1,280 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %}Flat Top Heavy Duty Pallets | Plasti Pallets SA{% endblock %}
+{% block title %}Flat Top HD Plastic Pallets South Africa | Heavy Duty | PlastiPallets{% endblock %}
 
 {% block meta_description %}
-Heavy-duty flat top plastic pallets for food & pharmaceutical use.
-Lightweight yet supports up to 6T dynamic load. Multiple sizes available.
+Flat Top HD plastic pallets - heavy duty design for maximum load capacity. Perfect for export and industrial use. Get quote +27 71 329 0606.
 {% endblock %}
 
 {% block content %}
 
-<!-- HERO SECTION -->
-<section class="hero text-light text-center py-5"
-   style="background: #1a365d;">     
-  <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(220,53,69,.9);"></div>
-  <div class="container position-relative">
-    <h1 class="display-5 fw-bold mt-3">Flat Top Heavy Duty Plastic Pallets</h1>
-    <p class="lead">Up to 6 T Dynamic • Lightweight • Ideal for Pharmaceutical & Food Industries</p>
-    <a href="{% url 'products' %}" class="btn btn-primary btn-lg">← Back to Products</a>
-  </div>
-</section>
-
-<!-- White Spacer -->
-<section class="py-4 bg-white"></section>
-
-<!-- PRODUCT GRID -->
-<section class="py-5 bg-success text-white">
-  <div class="container-fluid px-4 px-md-5">
-    <img src="{% static 'images/flat-top-hd/info-chart.jpg' %}"
-         alt="Flat Top Heavy Duty Pallet Information Chart"
-         class="img-fluid w-100 mb-4"
-         style="max-height:80px;object-fit:contain;" loading="lazy">
-
-    <h2 class="text-center mb-4">Available Sizes & Related Products</h2>
-
-    <div class="row g-4">
-      {% comment %}
-      Each card: image → spec text → small capacity chart → title → CTA
-      {% endcomment %}
-
-      <!-- Card 1 -->
-      <div class="col-12 col-sm-6 col-md-4">
-        <div class="card h-100 shadow-sm border-0">
-          <img src="{% static 'images/flat-top-hd/a1000x1000x165.jpg' %}"
-               alt="Flat Top HD Pallet 1000x1000x165 mm, Reinforced 7 Bars"
-               class="card-img-top" style="height:200px;object-fit:contain;" loading="lazy">
-          <div class="card-body d-flex flex-column">
-            <p class="card-text flex-grow-1">Reinforced: 7 Bars</p>
-            <img src="{% static 'images/flat-top-hd/capacity-chart.jpg' %}"
-                 alt="Capacity chart for Flat Top HD Pallet"
-                 class="img-fluid mb-2" style="height:40px;object-fit:contain;" loading="lazy">
-            <h5 class="card-title">1000 × 1000 × 165 mm</h5>
-            <a href="https://wa.me/27713290606?text=Hi%20PlastiPallets,%20I%20want%20a%20quote%20for%20Flat%20Top%20HD%20A"
-               class="btn btn-success mt-auto">Get Quote</a>
-          </div>
+<!-- HERO BANNER - Same as Heavy Duty Grid -->
+<section class="py-5 bg-white">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <nav aria-label="breadcrumb" class="mb-3">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'products' %}">Products</a></li>
+            <li class="breadcrumb-item active">Flat Top HD</li>
+          </ol>
+        </nav>
+        
+        <h1 class="display-5 fw-bold mb-4">Flat Top Heavy Duty Plastic Pallets</h1>
+        <p class="lead text-muted mb-4">Heavy duty solid top design for maximum strength and 1500kg dynamic load capacity.</p>
+        
+        <div class="d-flex flex-wrap gap-3 mb-4">
+          <span class="badge bg-success fs-6">1500kg Dynamic Load</span>
+          <span class="badge bg-success fs-6">Solid Top Design</span>
+          <span class="badge bg-success fs-6">Heavy Duty</span>
+          <span class="badge bg-success fs-6">Easy Cleaning</span>
+        </div>
+        
+        <div class="d-flex flex-column flex-sm-row gap-3">
+          <a href="https://wa.me/27713290606?text=Hi%20PlastiPallets,%20I%20want%20a%20quote%20for%20Flat%20Top%20HD%20Pallets" 
+             target="_blank" class="btn btn-success btn-lg">
+            <i class="fab fa-whatsapp me-2"></i> Get Instant Quote
+          </a>
+          <a href="{% url 'products' %}" class="btn btn-outline-success btn-lg">← Back to Products</a>
         </div>
       </div>
-
-      <!-- Card 2 -->
-      <div class="col-12 col-sm-6 col-md-4">
-        <div class="card h-100 shadow-sm border-0">
-          <img src="{% static 'images/flat-top-hd/b1100x1100x150.jpg' %}"
-               alt="Flat Top HD Pallet 1100x1100x150 mm, Reinforced 5 Bars"
-               class="card-img-top" style="height:200px;object-fit:contain;" loading="lazy">
-          <div class="card-body d-flex flex-column">
-            <p class="card-text flex-grow-1">Reinforced: 5 Bars</p>
-            <img src="{% static 'images/flat-top-hd/capacity-chart.jpg' %}"
-                 alt="Capacity chart for Flat Top HD Pallet"
-                 class="img-fluid mb-2" style="height:40px;object-fit:contain;" loading="lazy">
-            <h5 class="card-title">1100 × 1100 × 150 mm</h5>
-            <a href="https://wa.me/27713290606?text=Hi%20PlastiPallets,%20I%20want%20a%20quote%20for%20Flat%20Top%20HD%20B"
-               class="btn btn-success mt-auto">Get Quote</a>
-          </div>
-        </div>
+      <div class="col-lg-6 text-center">
+        <img src="{% static 'images/flat-top-hd/g1200x1100x150.jpg' %}" 
+             alt="Flat Top HD Plastic Pallet - Solid Top Heavy Duty Design" 
+             class="img-fluid rounded shadow" loading="lazy">
       </div>
-
-      <!-- Repeat same pattern for remaining cards -->
-      <!-- Make sure each alt text is unique and descriptive -->
-      <!-- ... -->
     </div>
   </div>
 </section>
 
+<!-- TRUST BAR - Same as Heavy Duty Grid -->
+<section class="py-3 bg-success text-light text-center">
+  <div class="container">
+    <div class="row gy-2">
+      <div class="col-md-3"><i class="fas fa-shield-alt me-1"></i> 5-Year Warranty</div>
+      <div class="col-md-3"><i class="fas fa-recycle me-1"></i> Food Grade HDPE</div>
+      <div class="col-md-3"><i class="fas fa-microchip me-1"></i> RFID Ready</div>
+      <div class="col-md-3"><i class="fas fa-truck me-1"></i> Nationwide Delivery</div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- PALLETS GRID - Identical to Heavy Duty Grid Layout -->
+<section class="py-5 bg-success">
+    <div class="container-fluid px-5">
+        <div class="border rounded bg-white mb-4 p-2">
+            <img src="{% static 'images/flat-top-hd/info-chart.jpg' %}" alt="Flat Top HD Pallets Information Chart - Load Capacity Specifications"
+                 class="img-fluid w-100" style="max-height: 80px; object-fit: contain;"> 
+        </div>
+        <h2 class="text-center mb-4 text-white">Available Sizes & Models</h2>
+        <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100 shadow-sm border-0 bg-white">
+                    <div class="border" style="height: 280px; display: flex; align-items: center; justify-content: center; background: white;">
+                        <img src="{% static 'images/flat-top-hd/f1200x1000x150.jpg' %}" 
+                             class="img-fluid" 
+                             alt="Flat Top HD Pallet 1200x1000mm"
+                             style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                    </div>
+                    <div class="card-body d-flex flex-column">                        
+                        <p class="card-text flex-grow-1"><strong>Reinforced:</strong> Yes:  8 Bars</p>
+                        <div class="border" style="height: 80px; display: flex; align-items: center; justify-content: center; background: white;">
+                            <img src="{% static 'images/flat-top-hd/capacity-chart.jpg' %}" 
+                                 class="img-fluid w-100 h-100" 
+                                 alt="Capacity: Dynamic 1500kg, Static 6000kg"
+                                 style="object-fit: fill;">
+                        </div>
+                        <h5 class="card-title mt-2">1200 x 1000 x150 mm</h5>
+                        <a href="https://wa.me/27713290606?text=Hi%20PlastiPallets,%20I%20want%20a%20quote%20for%20Flat%20Top%20HD%20(1200x1000mm)" 
+                           class="btn btn-success mt-auto">Get Quote</a> 
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100 shadow-sm border-0 bg-white">
+                    <div class="border" style="height: 280px; display: flex; align-items: center; justify-content: center; background: white;">
+                        <img src="{% static 'images/flat-top-hd/l1200x800x150.jpg' %}" 
+                             class="img-fluid" 
+                             alt="Flat Top HD Pallet 1200x800mm"
+                             style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                    </div>
+                    <div class="card-body d-flex flex-column">                        
+                        <p class="card-text flex-grow-1"><strong>Reinforced:</strong> Yes:  5 Bars</p>
+                        <div class="border" style="height: 80px; display: flex; align-items: center; justify-content: center; background: white;">
+                            <img src="{% static 'images/flat-top-hd/capacity-chart.jpg' %}" 
+                                 class="img-fluid w-100 h-100" 
+                                 alt="Capacity: Dynamic 1500kg, Static 6000kg"
+                                 style="object-fit: fill;">
+                        </div>
+                        <h5 class="card-title mt-2">1200 x 800 x 150 mm</h5>
+                        <a href="https://wa.me/27713290606?text=Hi%20PlastiPallets,%20I%20want%20a%20quote%20for%20Flat%20Top%20HD%20(1200x800mm)" 
+                           class="btn btn-success mt-auto">Get Quote</a> 
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100 shadow-sm border-0 bg-white">
+                    <div class="border" style="height: 280px; display: flex; align-items: center; justify-content: center; background: white;">
+                        <img src="{% static 'images/flat-top-hd/b1100x1100x150.jpg' %}" 
+                             class="img-fluid" 
+                             alt="Flat Top HD Pallet 1100x1100mm"
+                             style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                    </div>
+                    <div class="card-body d-flex flex-column">                        
+                        <p class="card-text flex-grow-1"><strong>Reinforced:</strong> Yes:  5 Bars</p>
+                        <div class="border" style="height: 80px; display: flex; align-items: center; justify-content: center; background: white;">
+                            <img src="{% static 'images/flat-top-hd/capacity-chart.jpg' %}" 
+                                 class="img-fluid w-100 h-100" 
+                                 alt="Capacity: Dynamic 1500kg, Static 6000kg"
+                                 style="object-fit: fill;">
+                        </div>
+                        <h5 class="card-title mt-2">1100 x 1100 x 150 mm</h5>
+                        <a href="https://wa.me/27713290606?text=Hi%20PlastiPallets,%20I%20want%20a%20quote%20for%20Flat%20Top%20HD%20(1100x1100mm)" 
+                           class="btn btn-success mt-auto">Get Quote</a> 
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100 shadow-sm border-0 bg-white">
+                    <div class="border" style="height: 280px; display: flex; align-items: center; justify-content: center; background: white;">
+                        <img src="{% static 'images/flat-top-hd/a1000x1000x165.jpg' %}" 
+                             class="img-fluid" 
+                             alt="Flat Top HD Pallet 1000x1000mm"
+                             style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                    </div>
+                    <div class="card-body d-flex flex-column">                        
+                        <p class="card-text flex-grow-1"><strong>Reinforced:</strong> Yes</p>
+                        <div class="border" style="height: 80px; display: flex; align-items: center; justify-content: center; background: white;">
+                            <img src="{% static 'images/flat-top-hd/capacity-chart.jpg' %}" 
+                                 class="img-fluid w-100 h-100" 
+                                 alt="Capacity: Dynamic 1500kg, Static 6000kg"
+                                 style="object-fit: fill;">
+                        </div>
+                        <h5 class="card-title mt-2">1000 x 1000 x165 mm</h5>  
+                        <a href="https://wa.me/27713290606?text=Hi%20PlastiPallets,%20I%20want%20a%20quote%20for%20Flat%20Top%20HD%20(1000x1000mm)" 
+                           class="btn btn-success mt-auto">Get Quote</a> 
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100 shadow-sm border-0 bg-white">
+                    <div class="border" style="height: 280px; display: flex; align-items: center; justify-content: center; background: white;">
+                        <img src="{% static 'images/flat-top-hd/c1100x1100x150.jpg' %}" 
+                             class="img-fluid" 
+                             alt="Flat Top HD Pallet 1100x1100mm"
+                             style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                    </div>
+                    <div class="card-body d-flex flex-column">                        
+                        <p class="card-text flex-grow-1"><strong>Reinforced:</strong> Yes:   8 Bars</p>
+                        <div class="border" style="height: 80px; display: flex; align-items: center; justify-content: center; background: white;">
+                            <img src="{% static 'images/flat-top-hd/capacity-chart.jpg' %}" 
+                                 class="img-fluid w-100 h-100" 
+                                 alt="Capacity: Dynamic 1500kg, Static 6000kg"
+                                 style="object-fit: fill;">
+                        </div>
+                        <h5 class="card-title mt-2">800 x 600 mm</h5>
+                        <a href="https://wa.me/27713290606?text=Hi%20PlastiPallets,%20I%20want%20a%20quote%20for%20Flat%20Top%20HD%20(800x600mm)" 
+                           class="btn btn-success mt-auto">Get Quote</a> 
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100 shadow-sm border-0 bg-white">
+                    <div class="border" style="height: 280px; display: flex; align-items: center; justify-content: center; background: white;">
+                        <img src="{% static 'images/flat-top-hd/i1200x1200x160.jpg' %}" 
+                             class="img-fluid" 
+                             alt="Flat Top HD Pallet 1200x1200mm"
+                             style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                    </div>
+                    <div class="card-body d-flex flex-column">                       
+                        <p class="card-text flex-grow-1"><strong>Reinforced:</strong> Yes:  8 Bars</p>
+                        <div class="border" style="height: 80px; display: flex; align-items: center; justify-content: center; background: white;">
+                            <img src="{% static 'images/flat-top-hd/capacity-chart.jpg' %}" 
+                                 class="img-fluid w-100 h-100" 
+                                 alt="Capacity: Dynamic 1500kg, Static 6000kg"
+                                 style="object-fit: fill;">
+                        </div>
+                         <h5 class="card-title mt-2">1200 x 1200 mm</h5>
+                       <a href="https://wa.me/27713290606?text=Hi%20PlastiPallets,%20I%20want%20a%20quote%20for%20Flat%20Top%20HD%20(1200x1200mm)" 
+                          class="btn btn-success mt-auto">Get Quote</a> 
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100 shadow-sm border-0 bg-white">
+                    <div class="border" style="height: 280px; display: flex; align-items: center; justify-content: center; background: white;">
+                        <img src="{% static 'images/flat-top-hd/j1300x1100x160.jpg' %}" 
+                             class="img-fluid" 
+                             alt="Flat Top HD Pallet 1000x800mm"
+                             style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                    </div>
+                    <div class="card-body d-flex flex-column">                        
+                        <p class="card-text flex-grow-1"><strong>Reinforced:</strong> Yes</p>
+                        <div class="border" style="height: 80px; display: flex; align-items: center; justify-content: center; background: white;">
+                            <img src="{% static 'images/flat-top-hd/capacity-chart.jpg' %}" 
+                                 class="img-fluid w-100 h-100" 
+                                 alt="Capacity: Dynamic 1500kg, Static 6000kg"
+                                 style="object-fit: fill;">
+                        </div>
+                        <h5 class="card-title mt-2">1300 x 1100 x160 mm</h5>
+                        <a href="https://wa.me/27713290606?text=Hi%20PlastiPallets,%20I%20want%20a%20quote%20for%20Flat%20Top%20HD%20(1000x800mm)" 
+                           class="btn btn-success mt-auto">Get Quote</a> 
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100 shadow-sm border-0 bg-white">
+                    <div class="border" style="height: 280px; display: flex; align-items: center; justify-content: center; background: white;">
+                        <img src="{% static 'images/flat-top-hd/k1300x1300x150.jpg' %}" 
+                             class="img-fluid" 
+                             alt="Flat Top HD Pallet 1100x900mm"
+                             style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                    </div>
+                    <div class="card-body d-flex flex-column">                        
+                        <p class="card-text flex-grow-1"><strong>Reinforced:</strong> Yes:  8 Bars</p>
+                        <div class="border" style="height: 80px; display: flex; align-items: center; justify-content: center; background: white;">
+                            <img src="{% static 'images/flat-top-hd/capacity-chart.jpg' %}" 
+                                 class="img-fluid w-100 h-100" 
+                                 alt="Capacity: Dynamic 1500kg, Static 6000kg"
+                                 style="object-fit: fill;">
+                        </div>
+                         <h5 class="card-title mt-2">1100 x 900 mm</h5>
+                        <a href="https://wa.me/27713290606?text=Hi%20PlastiPallets,%20I%20want%20a%20quote%20for%20Flat%20Top%20HD%20(1100x900mm)" 
+                           class="btn btn-success mt-auto">Get Quote</a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Fixed hover effect - 50px was too much */
+.card {
+    transition: transform 0.2s ease-in-out;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+</style>
 {% endblock %}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

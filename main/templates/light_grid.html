@@ -1,357 +1,258 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %}Light Duty Grid Pallets | Plastic Pallets SA{% endblock %}
+{% block title %}Light Flat Plastic Pallets South Africa | Light Duty | PlastiPallets{% endblock %}
+
+{% block meta_description %}
+Light flat plastic pallets perfect for light to medium duty applications. 1000kg dynamic load, lightweight design. Ideal for food, pharmaceutical & retail industries. Get quote +27 71 329 0606.
+{% endblock %}
 
 {% block content %}
-<!-- HERO BANNER -->
-<section
-  class="hero text-light text-center py-5"
-  style="
-    background: #1a365d;
-    
-  "
->
-  <div
-    style="
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(220, 53, 69, 1);
-      z-index: 1;
-    "
-  ></div>
-  <div class="container" style="position: relative; z-index: 2">
-    <h1 class="display-5 fw-bold">Light Duty Grid Pallets</h1>
-    <p class="lead">Up to 4T Dynamic • Lightweight • Ideal for Pharmaceutical & Food Industry</p>
-    <a href="{% url 'products' %}" class="btn btn-primary btn-lg">← Back to Products</a>
+
+<!-- HERO BANNER - Fixed -->
+<section class="py-5 bg-white">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <nav aria-label="breadcrumb" class="mb-3">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'products' %}">Products</a></li>
+            <li class="breadcrumb-item active">Light Flat</li>
+          </ol>
+        </nav>
+        
+        <h1 class="display-5 fw-bold mb-4">Light Grid Plastic Pallets</h1>
+        <p class="lead text-muted mb-4">Lightweight flat top pallets with 1000kg dynamic load capacity. Perfect for light to medium duty applications in various industries.</p>
+        
+        <div class="d-flex flex-wrap gap-3 mb-4">
+          <span class="badge bg-success fs-6">1000kg Dynamic Load</span>
+          <span class="badge bg-success fs-6">Lightweight Design</span>
+          <span class="badge bg-success fs-6">Cost Effective</span>
+          <span class="badge bg-success fs-6">Easy Handling</span>
+        </div>
+        
+        <div class="d-flex flex-column flex-sm-row gap-3">
+          <a href="https://wa.me/27713290606?text=Hi%20PlastiPallets,%20I%20want%20a%20quote%20for%20Light%20Flat%20Pallets" 
+             target="_blank" class="btn btn-success btn-lg">
+            <i class="fab fa-whatsapp me-2"></i> Get Instant Quote
+          </a>
+          <a href="{% url 'products' %}" class="btn btn-outline-success btn-lg">← Back to Products</a>
+        </div>
+      </div>
+      <div class="col-lg-6 text-center">
+        <img src="{% static 'images/light-grid/e1200x1000x150.jpg' %}" 
+             alt="Light Flat Plastic Pallet - Lightweight Design for Easy Handling" 
+             class="img-fluid rounded shadow" loading="lazy">
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- White Gap -->
-<section class="py-4 bg-white"></section> <!-- 2cm gap -->
+<!-- TRUST BAR -->
+<section class="py-3 bg-success text-light text-center">
+  <div class="container">
+    <div class="row gy-2">
+      <div class="col-md-3"><i class="fas fa-shield-alt me-1"></i> 5-Year Warranty</div>
+      <div class="col-md-3"><i class="fas fa-recycle me-1"></i> Food Grade HDPE</div>
+      <div class="col-md-3"><i class="fas fa-microchip me-1"></i> RFID Ready</div>
+      <div class="col-md-3"><i class="fas fa-truck me-1"></i> Nationwide Delivery</div>
+    </div>
+  </div>
+</section>
 
 
-<!-- PALLETS GRID -->
+
+
 <!-- Product Grid Section -->
 <section class="py-5 bg-success">
     <div class="container-fluid px-5">
-          <img src="{% static 'images/light-grid/entry.jpg' %}" alt="Flat Pallets Info"
-               class="img-fluid w-100"
-                style="max-height: 80px; object-fit: contain;"> 
-        <h2 class="text-center mb-4 text-white">Static weight of 4 Tonne</h2>
+        <div class="border rounded bg-white mb-4 p-2">
+        <img src="{% static 'images/flat-top-hd/info-chart.jpg' %}" 
+         alt="Heavy Duty Grid Pallets Information Chart - Load Capacity Specifications"
+         class="img-fluid w-100" style="max-height: 80px; object-fit: contain;"> 
+</div>
+    
+    
+        <h2 class="text-center mb-4 text-white">Available Sizes & Models</h2>
         <div class="row g-4">
             <!-- Card 1 -->
             <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-                <div class="card h-100 shadow-sm border-0">
-                   <img src="{% static 'images/light-grid/d1000x1000x150.jpg' %}" class="card-img-top" alt="Flat Top HD" style="height: 180px; object-fit: contain;">
+                <div class="card h-100 shadow-sm border-0 bg-white">
+                    <img src="{% static 'images/light-grid/e1200x1000x150.jpg' %}" 
+                         class="card-img-top" 
+                         alt="Light Flat Pallet 1200x1000x140mm - 4 Bar Reinforcement"
+                         style="height: 280px; object-fit: contain;">
                     <div class="card-body d-flex flex-column">                        
-                        <p class="card-text flex-grow-1">Reinforced: 4 Bars •</p>
-                        <img src="{% static 'images/light-flat/4t-capacity-chart.jpg' %}" class="card-img-top" alt="Flat Top HD" style="height: 40px; object-fit: contain;">
-                         <h5 class="card-title">1200 x 1000 x 140 mm</h5>  
-                        <a href="https://wa.me/27713290606?text=Hi%20PlastiPallets,%20I%20want%20a%20quote%20for%20Heavy%20Duty%20Grid" class="btn btn-success">Get Quote</a> 
+                        <p class="card-text flex-grow-1"><strong>Reinforced:  No</strong> </p>
+                        <img src="{% static 'images/light-grid/2t-capacity-chart.jpg' %}" 
+                             class="card-img-top" 
+                             alt="Capacity: Dynamic 1000kg"
+                             style="height: 80px; object-fit: contain;">
+                         <h5 class="card-title">1200 x 1000 x 120 mm</h5>  
+                       <a href="https://wa.me/27713290606?text=Hi%20PlastiPallets,%20I%20want%20a%20quote%20for%20Light%20Flat%20A%20(1200x1000x140mm)" 
+                          class="btn btn-success mt-auto">Get Quote</a> 
                     </div>
                 </div>
             </div>
 
             <!-- Card 2 -->
             <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-                <div class="card h-100 shadow-sm border-0">
-                 <img src="{% static 'images/light-grid/C1200x800x13.5.jpg' %}" class="card-img-top" alt="Flat Top HD" style="height: 180px; object-fit: contain;"> 
-                 <div class="card-body d-flex flex-column">
-                     <p class="card-text flex-grow-1">Reinforced; 3 Bars •</p>
-                      <img src="{% static 'images/light-grid/4t-capacity-chart.jpg' %}" class="card-img-top" alt="Flat Top HD" style="height: 40px; object-fit: contain;">
-                     <h5 class="card-title">1100 x 1000 x 165 mm</h5>                        
-                       <a href="https://wa.me/27713290606?text=Hi%20PlastiPallets,%20I%20want%20a%20quote%20for%20Heavy%20Duty%20Grid" class="btn btn-success">Get Quote</a> 
+                <div class="card h-100 shadow-sm border-0 bg-white">
+                    <img src="{% static 'images/light-grid/b1100x1100x150.jpg' %}" 
+                         class="card-img-top" 
+                         alt="Light Flat Pallet 1100x1100x120mm - 4 Bar Reinforcement"
+                         style="height: 280px; object-fit: contain;">
+                    <div class="card-body d-flex flex-column">                        
+                        <p class="card-text flex-grow-1"><strong>Reinforced:</strong> 4 Bars</p>
+                         <img src="{% static 'images/light-grid/2t-capacity-chart.jpg' %}" 
+                              class="card-img-top" 
+                              alt="Capacity: Dynamic 800kg"
+                              style="height: 80px; object-fit: contain;">
+                         <h5 class="card-title">1100 x 1100 x 120 mm</h5>
+                        <a href="https://wa.me/27713290606?text=Hi%20PlastiPallets,%20I%20want%20a%20quote%20for%20Light%20Flat%20B%20(1100x1100x120mm)" 
+                           class="btn btn-success mt-auto">Get Quote</a> 
                     </div>
                 </div>
             </div>
 
             <!-- Card 3 -->
             <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-                <div class="card h-100 shadow-sm border-0">
-                    <img src="{% static 'images/light-grid/e1200x800x150.jpg' %}" class="card-img-top" alt="Flat Top HD" style="height: 180px; object-fit: contain;">
+                <div class="card h-100 shadow-sm border-0 bg-white">
+                    <img src="{% static 'images/light-grid/d1000x1000x150.jpg' %}" 
+                         class="card-img-top" 
+                         alt="Light Flat Pallet 1200X800X13.55mm - 3 Bar Reinforcement"
+                         style="height: 280px; object-fit: contain;">
                     <div class="card-body d-flex flex-column">                        
-                        <p class="card-text flex-grow-1">Reinforced: No •</p>
-                         <img src="{% static 'images/light-grid/2t-capacity-chart.jpg' %}" class="card-img-top" alt="Flat Top HD" style="height: 40px; object-fit: contain;">
-                        <h5 class="card-title">1200 x 800 x 1150 mm</h5>
-                        <a href="https://wa.me/27713290606?text=Hi%20PlastiPallets,%20I%20want%20a%20quote%20for%20Heavy%20Duty%20Grid" class="btn btn-success">Get Quote</a> 
+                        <p class="card-text flex-grow-1"><strong>Reinforced:</strong> 4 Bars</p>
+                         <img src="{% static 'images/light-grid/4t-capacity-chart.jpg' %}" 
+                              class="card-img-top" 
+                              alt="Capacity: Dynamic 1000kg"
+                              style="height: 80px; object-fit: contain;">
+                         <h5 class="card-title">1200 x 800 X 13.5 mm</h5>
+                        <a href="https://wa.me/27713290606?text=Hi%20PlastiPallets,%20I%20want%20a%20quote%20for%20Light%20Flat%20C%20(1400x1400x14.5mm)" 
+                           class="btn btn-success mt-auto">Get Quote</a> 
                     </div>
                 </div>
             </div>
 
             <!-- Card 4 -->
             <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-                <div class="card h-100 shadow-sm border-0">
-                    <img src="{% static 'images/light-grid/f1200x1000x150.jpg' %}" class="card-img-top" alt="Flat Top HD" style="height: 180px; object-fit: contain;">
-                    <div class="card-body d-flex flex-column">                        
-                        <p class="card-text flex-grow-1">Reinforced: 4 Bars •</p>
-                        <img src="{% static 'images/light-grid/4t-capacity-chart.jpg' %}" class="card-img-top" alt="Flat Top HD" style="height: 40px; object-fit: contain;">
-                        <h5 class="card-title">1200 x 1000 x 140 mm</h5>
-                       <a href="https://wa.me/27713290606?text=Hi%20PlastiPallets,%20I%20want%20a%20quote%20for%20Heavy%20Duty%20Grid" class="btn btn-success">Get Quote</a> 
+                <div class="card h-100 shadow-sm border-0 bg-white">
+                    <img src="{% static 'images/light-grid/g1200x1000x150.jpg' %}" 
+                         class="card-img-top" 
+                         alt="Light Flat Pallet 1200x800x150mm - 4 Bar Reinforcement"
+                         style="height: 280px; object-fit: contain;">
+                    <div class="card-body d-flex flex-column">                       
+                        <p class="card-text flex-grow-1"><strong>Reinforced:</strong> 4 Bars</p>
+                         <img src="{% static 'images/light-flat/4t-capacity-chart.jpg' %}" 
+                              class="card-img-top" 
+                              alt="Capacity: Dynamic 1000kg"
+                              style="height: 80px; object-fit: contain;">
+                         <h5 class="card-title">1200 x 800 x 150 mm</h5>
+                        <a href="https://wa.me/27713290606?text=Hi%20PlastiPallets,%20I%20want%20a%20quote%20for%20Light%20Flat%20D%20(1200x800x150mm)" 
+                           class="btn btn-success mt-auto">Get Quote</a> 
                     </div>
                 </div>
             </div>
 
             <!-- Card 5 -->
             <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-                <div class="card h-100 shadow-sm border-0">
-                    <img src="{% static 'images/light-grid/h1300x1000x150.jpg' %}" class="card-img-top" alt="Flat Top HD" style="height: 180px; object-fit: contain;">
+                <div class="card h-100 shadow-sm border-0 bg-white">
+                    <img src="{% static 'images/light-grid/h1300x1000x150.jpg' %}" 
+                         class="card-img-top" 
+                         alt="Light Flat Pallet 1200x1000x140mm - 4 Bar Reinforcement"
+                         style="height: 280px; object-fit: contain;">
                     <div class="card-body d-flex flex-column">                        
-                        <p class="card-text flex-grow-1">Reinforced: 4 Bars •</p>
-                        <img src="{% static 'images/light-grid/4t-capacity-chart.jpg' %}" class="card-img-top" alt="Flat Top HD" style="height: 40px; object-fit: contain;">
-                        <h5 class="card-title">1300 x 1000 x 145 mm</h5>
-                        <a href="https://wa.me/27713290606?text=Hi%20PlastiPallets,%20I%20want%20a%20quote%20for%20Heavy%20Duty%20Grid" class="btn btn-success">Get Quote</a> 
+                        <p class="card-text flex-grow-1"><strong>Reinforced:</strong> 4 Bars</p>
+                        <img src="{% static 'images/light-flat/4t-capacity-chart.jpg' %}" 
+                             class="card-img-top" 
+                             alt="Capacity: Dynamic 1000kg"
+                             style="height: 80px; object-fit: contain;">
+                        <h5 class="card-title">1300 x 1000 x 150 mm</h5>
+                        <a href="https://wa.me/27713290606?text=Hi%20PlastiPallets,%20I%20want%20a%20quote%20for%20Light%20Flat%20E%20(1200x1000x140mm)" 
+                           class="btn btn-success mt-auto">Get Quote</a> 
                     </div>
                 </div>
             </div>
 
             <!-- Card 6 -->
             <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-                <div class="card h-100 shadow-sm border-0">
-                    <img src="{% static 'images/light-grid/k 1200x1400x150.jpg' %}" class="card-img-top" alt="Flat Top HD" style="height: 180px; object-fit: contain;">
+                <div class="card h-100 shadow-sm border-0 bg-white">
+                    <img src="{% static 'images/light-grid/k 1200x1400x150.jpg' %}" 
+                         class="card-img-top" 
+                         alt="Light Flat Pallet 1100x1000x145mm - 4 Bar Reinforcement"
+                         style="height: 280px; object-fit: contain;">
                     <div class="card-body d-flex flex-column">                        
-                        <p class="card-text flex-grow-1">Reinforced: 4Bars •</p>
-                         <img src="{% static 'images/light-grid/4t-capacity-chart.jpg' %}" class="card-img-top" alt="Flat Top HD" style="height: 40px; object-fit: contain;">
-                        <h5 class="card-title">1400 x 1200 x 145 mm</h5>
-                        <a href="https://wa.me/27713290606?text=Hi%20PlastiPallets,%20I%20want%20a%20quote%20for%20Heavy%20Duty%20Grid" class="btn btn-success">Get Quote</a> 
+                        <p class="card-text flex-grow-1"><strong>Reinforced:</strong> 4 Bars</p>
+                        <img src="{% static 'images/light-flat/4t-capacity-chart.jpg' %}" 
+                             class="card-img-top" 
+                             alt="Capacity: Dynamic 1000kg"
+                             style="height: 80px; object-fit: contain;">
+                         <h5 class="card-title">1200 x 1400 x 150 mm</h5>
+                       <a href="https://wa.me/27713290606?text=Hi%20PlastiPallets,%20I%20want%20a%20quote%20for%20Light%20Flat%20F%20(1100x1000x145mm)" 
+                          class="btn btn-success mt-auto">Get Quote</a> 
                     </div>
                 </div>
             </div>
 
             <!-- Card 7 -->
             <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-                <div class="card h-100 shadow-sm border-0">
-                    <img src="{% static 'images/light-grid/mm1400x1400x145.jpg' %}" class="card-img-top" alt="Flat Top HD" style="height  180px; object-fit: contain;">
-                    <div class="card-body d-flex flex-column">                        
-                        <p class="card-text flex-grow-1">Reinforced: 6 Bars •</p>
-                        <img src="{% static 'images/light-grid/4t-capacity-chart.jpg' %}" class="card-img-top" alt="Flat Top HD" style="height: 40px; object-fit: contain;">
-                        <h5 class="card-title">1400 x 1400 x 145 mm</h5>
-                        <a href="https://wa.me/27713290606?text=Hi%20PlastiPallets,%20I%20want%20a%20quote%20for%20Heavy%20Duty%20Grid" class="btn btn-success">Get Quote</a> 
+                <div class="card h-100 shadow-sm border-0 bg-white">
+                    <img src="{% static 'images/light-grid/l1400x1400x150.jpg' %}" 
+                         class="card-img-top" 
+                         alt="Light Flat Pallet 1200x1200x140mm - 4 Bar Reinforcement"
+                         style="height: 280px; object-fit: contain;">
+                    <div class="card-body d-flex flex-column">                       
+                        <p class="card-text flex-grow-1"><strong>Reinforced:</strong> 6 Bars</p>
+                        <img src="{% static 'images/light-flat/4t-capacity-chart.jpg' %}" 
+                             class="card-img-top" 
+                             alt="Capacity: Dynamic 1000kg"
+                             style="height: 80px; object-fit: contain;">
+                        <h5 class="card-title">1400 x 1400 x 150 mm</h5>
+                        <a href="https://wa.me/27713290606?text=Hi%20PlastiPallets,%20I%20want%20a%20quote%20for%20Light%20Flat%20G%20(1200x1200x140mm)" 
+                           class="btn btn-success mt-auto">Get Quote</a> 
                     </div>
                 </div>
             </div>
 
             <!-- Card 8 -->
             <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-                <div class="card h-100 shadow-sm border-0">
-                    <img src="{% static 'images/light-grid/l1400x1400x150.jpg' %}" class="card-img-top" alt="Flat Top HD" style="height: 180px; object-fit: contain;">
-                    <div class="card-body d-flex flex-column">                        
-                        <p class="card-text flex-grow-1">Reinforced: 6 Bars •</p>
-                        <img src="{% static 'images/light-grid/4t-capacity-chart.jpg' %}" class="card-img-top" alt="Flat Top HD" style="height: 40px; object-fit: contain;">
-                        <h5 class="card-title">1400 x 1400 x 145 mm</h5>
-                        <a href="https://wa.me/27713290606?text=Hi%20PlastiPallets,%20I%20want%20a%20quote%20for%20Heavy%20Duty%20Grid" class="btn btn-success">Get Quote</a> 
+                <div class="card h-100 shadow-sm border-0 bg-white">
+                    <img src="{% static 'images/light-grid/o1200x1200x140.jpg' %}" 
+                         class="card-img-top" 
+                         alt="Light Flat Pallet 1300x1100x145mm - 4 Bar Reinforcement"
+                         style="height: 280px; object-fit: contain;">
+                    <div class="card-body d-flex flex-column">                       
+                        <p class="card-text flex-grow-1"><strong>Reinforced:</strong> 4 Bars</p>
+                        <img src="{% static 'images/light-flat/4t-capacity-chart.jpg' %}" 
+                             class="card-img-top" 
+                             alt="Capacity: Dynamic 1000kg"
+                             style="height: 80px; object-fit: contain;">
+                         <h5 class="card-title">1200 x 1200 x 140 mm</h5>
+                        <a href="https://wa.me/27713290606?text=Hi%20PlastiPallets,%20I%20want%20a%20quote%20for%20Light%20Flat%20H%20(1300x1100x145mm)" 
+                           class="btn btn-success mt-auto">Get Quote</a> 
                     </div>
                 </div>
             </div>
-
-            <!-- Add 2–4 more cards as needed -->
         </div>
     </div>
 </section>
+
+<!-- CTA SECTION -->
+<section class="py-5 bg-primary text-white text-center">
+  <div class="container">
+    <h2 class="mb-3">Need Custom Light Flat Pallets?</h2>
+    <p class="lead mb-4">We offer custom sizes and branding options for your specific requirements.</p>
+    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+      <a href="https://wa.me/27713290606" target="_blank" class="btn btn-success btn-lg">
+        <i class="fab fa-whatsapp me-2"></i> WhatsApp for Custom Quote
+      </a>
+      <a href="tel:+27713290606" class="btn btn-light btn-lg">
+        <i class="fas fa-phone me-2"></i> Call +27 71 329 0606
+      </a>
+    </div>
+  </div>
+</section>
+
 {% endblock %}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

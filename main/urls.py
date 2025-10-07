@@ -1,16 +1,8 @@
-# main/urls.py
 from django.urls import path
 from . import views
-from django.contrib.sitemaps.views import sitemap
-from .sitemaps import StaticSitemap, ProductSitemap  # include ProductSitemap
-
-# Define sitemaps for app-level access if needed (optional)
-sitemaps = {
-    'static': StaticSitemap,
-    'products': ProductSitemap,  # Include dynamic products
-}
 
 urlpatterns = [
+    # Main pages
     path('', views.home, name='home'),
     path('about/', views.about, name='about'),
     path('products/', views.products, name='products'),
@@ -28,84 +20,4 @@ urlpatterns = [
     
     # Contact form email
     path('send-email/', views.send_email, name='send_email'),
-    
-    # Optional app-level sitemap (can be omitted if handled globally)
-    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='sitemap'),
 ]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

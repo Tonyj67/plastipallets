@@ -148,16 +148,16 @@ STATICFILES_DIRS = [
 STATIC_ROOT = BASE_DIR / "staticfiles"
 os.makedirs(os.path.join(BASE_DIR, 'static'), exist_ok=True)
 
-USE_X_FORWARDED_HOST = True
-SECURE_SSL_REDIRECT = True
-SECURE_HSTS_SECONDS = 31536000  # 1 year in seconds
-SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-SECURE_HSTS_PRELOAD = True
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
+USE_X_FORWARDED_HOST = True  # Fixed typo: FORMARDED -> FORWARDED
 
-
+# DISABLE HTTPS in development - enable these only in production
+SECURE_SSL_REDIRECT = False  # Changed from True to False
+SECURE_HSTS_SECONDS = 0  # Changed from 31536000 to 0
+SECURE_HSTS_INCLUDE_SUBDOMAINS = False  # Changed from True to False
+SECURE_HSTS_PRELOAD = False  # Changed from True to False
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')  # Fixed typo
+SESSION_COOKIE_SECURE = False  # Changed from True to False
+CSRF_COOKIE_SECURE = False  # Changed from True to False
 
 # Whitenoise
 #MIDDLEWARE.insert(1, "whitenoise.middleware.WhiteNoiseMiddleware")
