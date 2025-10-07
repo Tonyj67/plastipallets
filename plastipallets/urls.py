@@ -14,76 +14,19 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-# plastipallets/urls.py
-"""
-URL configuration for plastipallets project.
-"""
 
-# plastipallets/urls.py
-# plastipallets/urls.py
 from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import TemplateView
 from django.contrib.sitemaps.views import sitemap
-from main.sitemaps import StaticSitemap, ProductSitemap  # include ProductSitemap
-
-# Global sitemaps
-sitemaps = {
-    'static': StaticSitemap,
-    'products': ProductSitemap,  # dynamic products included
-}
+from main.sitemaps import sitemaps  # ← CHANGED: Import the ready-made sitemaps dictionary
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),  # include all app URLs
-    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='sitemap'),  # SEO-friendly
+    
+    # CHANGED: Use the conditional sitemaps dictionary that won't break
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='sitemap'),
+    
     path('robots.txt', TemplateView.as_view(template_name="robots.txt", content_type="text/plain")),
 ]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
