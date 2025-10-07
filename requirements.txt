@@ -8,11 +8,13 @@ colorama==0.4.6
 cryptography==46.0.1
 dj-database-url==3.0.1
 Django==5.2.6
+django-heroku==0.3.1
 django-sslify==0.2.7
 gunicorn==23.0.0
 idna==3.10
 packaging==25.0
 pip-tools==7.5.0
+psycopg2==2.9.10
 psycopg2-binary==2.9.10
 pycparser==2.23
 pyOpenSSL==25.3.0

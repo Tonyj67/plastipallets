@@ -141,7 +141,7 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
@@ -151,13 +151,13 @@ os.makedirs(os.path.join(BASE_DIR, 'static'), exist_ok=True)
 USE_X_FORWARDED_HOST = True  # Fixed typo: FORMARDED -> FORWARDED
 
 # DISABLE HTTPS in development - enable these only in production
-SECURE_SSL_REDIRECT = False  # Changed from True to False
-SECURE_HSTS_SECONDS = 0  # Changed from 31536000 to 0
-SECURE_HSTS_INCLUDE_SUBDOMAINS = False  # Changed from True to False
-SECURE_HSTS_PRELOAD = False  # Changed from True to False
+SECURE_SSL_REDIRECT = True  # Changed from True to False
+SECURE_HSTS_SECONDS = 31536000 # Changed from 31536000 to 0
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True  # Changed from True to False
+SECURE_HSTS_PRELOAD = True  # Changed from True to False
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')  # Fixed typo
-SESSION_COOKIE_SECURE = False  # Changed from True to False
-CSRF_COOKIE_SECURE = False  # Changed from True to False
+SESSION_COOKIE_SECURE = True  # Changed from True to False
+CSRF_COOKIE_SECURE = True  # Changed from True to False
 
 # Whitenoise
 #MIDDLEWARE.insert(1, "whitenoise.middleware.WhiteNoiseMiddleware")
@@ -195,3 +195,17 @@ DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 #EMAIL_SSL_CERTFILE = certifi.where()
 #EMAIL_SSL_KEYFILE = None
 EMAIL_SSL_CONTEXT = ssl.create_default_context(cafile=certifi.where())
+
+# Configure database for Heroku
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.config(
+            default=os.environ.get('DATABASE_URL'),
+            conn_max_age=600,
+            ssl_require=True
+        )
+    }
+
+# Heroku settings
+import django_heroku
+django_heroku.settings(locals())
